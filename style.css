@@ -1,0 +1,301 @@
+* {
+  padding: 0px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+body {
+  color: #404040;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*----header ----*/
+
+.header {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bloc_photo {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #feca07;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo {
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  background-image: url("image/maPhoto170-180.png");
+}
+.bloc_name {
+  flex: 3;
+}
+.name {
+  margin: 90px auto 100px 80px;
+}
+.name h3 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: black;
+}
+h3 mark {
+  background: none;
+  color: #feca07;
+  font-weight: 200;
+}
+.name p {
+  font-size: 1.5em;
+  font-weight: bold;
+  position: relative;
+}
+.name p::before {
+  content: "";
+  width: 73px;
+  height: 2px;
+  background: #feca07;
+  position: absolute;
+  top: 25px;
+}
+
+/* ----GENERAL ----*/
+
+.double-col {
+  display: flex;
+}
+.first-col {
+  flex: 1;
+  background-color: #feca07;
+}
+.second-col {
+  flex: 3;
+}
+
+/*---- aside ---- */
+
+.aside_bloc h1 {
+  background-color: #404040;
+  color: #feca07;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  height: 30px;
+  padding-top: 2px;
+}
+.aside_bloc p {
+  margin: 20px 30px;
+  text-align: justify;
+}
+
+.bloc_logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: auto;
+}
+.logo {
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 8px;
+}
+
+/* ----- section ----*/
+
+/* ---- section headers ----*/
+
+.formation_header,
+.skill_header,
+.recommandation_header {
+  margin-left: 60px;
+  display: inline-flex;
+  position: relative;
+  color: black;
+}
+.formation_header h4,
+.skill_header h4,
+.recommandation_header h4 {
+  font-size: 1.6em;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+}
+.recommandation_header h4::before{
+  content:url(image/svg/crayonjaune4.png);
+  position: relative;
+  left: -10px;
+}
+.skill_header h4::before{
+  content:url(image/svg/cartablejaune.png);
+  position: relative;
+  left: -10px;
+}
+.formation_header h4::before{
+  content:url(image/svg/ecolejaune.png);
+  position: relative;
+  left: -10px;
+}
+
+.formation_header::before,
+.skill_header::before,
+.recommandation_header::before {
+  content: "";
+  width: 750px;
+  height: 2px;
+  background: #feca07;
+  top: 35px;
+  position: absolute;
+}
+
+/* ---- formation & skill_bloc ----*/
+
+.formation_bloc,
+.skill_bloc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 50px 80px 40px 100px;
+}
+.formation_bloc_left,
+.skill_bloc_left {
+  flex: 1;
+  position: relative;
+}
+.first_date::before {
+  content: "";
+  background: #feca07;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px #feca07;
+  left: -30px;
+  top: 6px;
+  position: absolute;
+}
+.second_date::before {
+  content: "";
+  background: #feca07;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: -33px;
+  top: 4px;
+  position: absolute;
+}
+.formation_bloc_right,
+.skill_bloc_right {
+  flex: 2;
+}
+
+.formation_bloc_right h5,
+.skill_bloc_right h5 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.formation_bloc_right h6,
+.skill_bloc_right h6 {
+  margin: 8px auto;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+/* ---- recommandation_bloc ----*/
+
+.recommandation_bloc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 30px 80px 20px 60px;
+  max-width: 600px;
+}
+.recommandation_bloc h4 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.recommandation_bloc h5 {
+  font-size: 1em;
+}
+.recommandation_bloc h6 {
+  font-size: 0.9em;
+}
+
+/* ---- Média queries ---- */
+
+@media screen and (max-width: 1024px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .bloc_photo {
+    flex: 1;
+    padding: 10px;
+  }
+  .bloc_name {
+    flex: 1;
+  }
+  .double-col {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .first-col {
+    flex: 1;
+    background-color: #feca07;
+    min-width: 430px;
+  }
+  .second-col {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .formation_header::before {
+    width: 240px;
+  }
+  .skill_header::before {
+    width: 525px;
+  }
+  .recommandation_header::before {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .skill_header::before {
+    top: 60px;
+    width: 330px;
+  }
+  .recommandation_bloc,
+  .skill_bloc,
+  .formation_bloc {
+    flex-direction: column;
+  }
+  .formation_bloc_right,
+  .skill_bloc_right,
+  .recommandation_bloc_right {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .formation_bloc_left,
+  .skill_bloc_left,
+  .recommandation_bloc_left {
+    text-align: center;
+  }
+}

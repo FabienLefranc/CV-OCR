@@ -133,18 +133,18 @@ aside p {
   position: relative;
   font-size: 25px;
 }
-.section-titre h3:first-child::before {
-  content: url(image/svg/crayonjaune4.png);
+.school::before {
+  content: url(image/002-school.png);
   position: relative;
   left: -10px;
 }
-.section-titre h3:nth-child(2)::before {
-  content: url(image/svg/cartablejaune.png);
+.briefcase::before {
+  content: url(image/001-briefcase.png);
   position: relative;
   left: -10px;
 }
-.section-titre h3:last-child::before {
-  content: url(image/svg/ecolejaune.png);
+.pencil::before {
+  content: url(image/003-pencil.png);
   position: relative;
   left: -10px;
 }
@@ -154,7 +154,7 @@ aside p {
   height: 2px;
   background: #feca07;
   top: 40px;
-  left: 0px;
+  left: 20px;
   position: absolute;
 }
 
@@ -165,7 +165,7 @@ aside p {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
 }
 .bloc-row1 {
   flex: 1;
@@ -259,8 +259,13 @@ h4 {
     width: 600px;
   }
 }
+@media screen and (max-width: 890px) {
+  .section-titre h3::after {
+    width: 400px;
+  }
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
   header {
     display: flex;
     flex-direction: column;
@@ -303,13 +308,26 @@ h4 {
   .recommandation_bloc h6 {
     margin-bottom: 20px;
   }
-}
-
-@media screen and (max-width: 425px) {
   .section-titre {
     margin-left: 0px;
+    padding: 0 20px;
+  }
+  .section-titre h3 {
     text-align: center;
   }
+  .section-titre h3::after {
+    width: 250px;
+    left: 260px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .section-titre h3::after {
+    left: 200px;
+  }
+}
+
+
+@media screen and (max-width: 510px) {
   .section-titre h3 {
     font-size: 20px;
     margin-bottom: 20px;
@@ -324,24 +342,26 @@ h4 {
   .bloc-col-left {
     margin-bottom: 20px;
   }
-}
-@media screen and (max-width: 375px) {
-  .section-titre h3 {
-    font-size: 18px;
-  }
-  .section-titre h3::after {
-    width: 170px;
-  }
   .recommandation_bloc {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 }
+@media screen and (max-width: 420px) {
+  .section-titre h3 {
+    font-size: 17px;
+  }
+  .section-titre h3::after {
+    width: 170px;
+    left: 90px;
+    top: 44px;
+  }
+  
+}
 @media screen and (max-width: 320px) {
   .section-titre h3::after {
     width: 150px;
-    left: 80px;
-    top: 60px;
+    left: 60px;
   }
 }
